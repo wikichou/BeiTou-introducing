@@ -1,0 +1,227 @@
+﻿<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>北投天狗庵</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			body{
+				height: 300vh;
+			}
+		</style>
+
+<style type="text/css">
+body{
+margin:0px;
+padding:0px;
+background:#fff url(b.jpg) center center fixed no-repeat;
+background-size: cover;
+}        
+</style>
+
+	</head>
+
+<script>
+
+var problem=["1. 天狗庵的前身是什麼?","2. 為什麼平田源吾一開始要拒絕慎村伍長的請求","3. 平田源吾得病後到了那裡的醫院治病","4. 以下哪一個是平田源吾的照片","5. 下列何著是舊天狗庵的照片","6. 請上網找找看，現在距離天狗庵遺址最近的溫泉旅館是哪一間"];
+var item=["A. 溫泉旅館","B. 平田源吾的房子","C. 慎村伍長的家",  "A. 因為平田源吾想要一個人住","B. 因為平田源吾擔心待客不周","C. 因為慎村伍長不想付錢",  "A. 新莊","B. 北投","C. 大稻埕"];
+var answer=[2,2,3,1,3];
+
+
+function check(){
+ var pn=0;
+ var msg="";
+
+	if (cans1==answer[pn]) {
+   msg="回答正確!!";
+   pn++;
+}
+
+	else {
+   msg="錯了喔，可以回頭看一下平田源吾的介紹"; 
+   pn++;
+}
+document.getElementById('show1').innerHTML=msg;
+
+
+	if (cans2==answer[pn]) {
+   msg="回答正確!!";
+   pn++;
+}
+
+	else {
+   msg="平田源吾拒絕的理由就在他的個人介紹裡面~"; 
+   pn++;
+}
+document.getElementById('show2').innerHTML=msg;
+
+	if (cans3==answer[pn]) {
+   msg="回答正確!!";
+   pn++;
+}
+
+	else {
+   msg="陷阱~~!!"; 
+   pn++;
+}
+document.getElementById('show3').innerHTML=msg;
+
+	if (cans4==answer[pn]) {
+   msg="回答正確!!";
+   pn++;
+}
+
+	else {
+   msg="回顧一下前面的照片，可以有答案喔"; 
+   pn++;
+}
+document.getElementById('show4').innerHTML=msg;
+
+	if (cans5==answer[pn]) {
+   msg="回答正確!!";
+   pn++;
+}
+
+	else {
+   msg="照片越舊，越有可能是答案呦"; 
+   pn++;
+}
+document.getElementById('show5').innerHTML=msg;
+
+	if (document.getElementById('q6').value=="加賀屋") {
+   msg="回答正確!!";
+}
+
+	else {
+   msg="上網搜尋，或是實地探查可以得到答案喔"; 
+}
+document.getElementById('show6').innerHTML=msg;
+
+}
+
+function retest(){
+
+document.getElementById('show1').innerHTML="";
+document.getElementById('show2').innerHTML="";
+document.getElementById('show3').innerHTML="";
+document.getElementById('show4').innerHTML="";
+document.getElementById('show5').innerHTML="";
+document.getElementById('show6').innerHTML="";
+shprob();
+
+}
+
+</script>
+
+	<body onload='shprob();'>
+		<!-- 下margin      顏色灰色 -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<!-- 上下左右都有padding -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle='collapse' data-target='.navbar-ex1-collapse'>
+				<!-- 那個點很重要 -->
+					<span class="sr-only">選單切換</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">北投天狗庵</a>
+			</div>
+			<!-- 刪除預設padding margin -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">目前頁面</a></li>
+					<li><a href="index.html">歷史介紹</a></li>
+					<li><a href="sc2.html">平田源吾</a></li>
+					<li><a href="sc4.html">照片</a></li>
+				</ul>
+							
+			</div>
+		</nav>
+		
+		
+<br><br><br>
+<font size=4><b>
+測驗時間!!
+<hr size=3>
+<span id='voc1'></span><br><br>
+<input type=radio name=q1 onclick='cans1=1;'><span id='item1' ></span><br>
+<input type=radio name=q1 onclick='cans1=2;'><span id='item2' ></span><br>
+<input type=radio name=q1 onclick='cans1=3;'><span id='item3' ></span><br>
+<p id='show1'></p><br><br>
+
+<span id='voc2'></span><br><br>
+<input type=radio name=q2 onclick='cans2=1;'><span id='item4' ></span><br>
+<input type=radio name=q2 onclick='cans2=2;'><span id='item5' ></span><br>
+<input type=radio name=q2 onclick='cans2=3;'><span id='item6' ></span><br>
+<p id='show2'></p><br><br>
+
+<span id='voc3'></span><br><br>
+<input type=radio name=q3 onclick='cans3=1;'><span id='item7' ></span><br>
+<input type=radio name=q3 onclick='cans3=2;'><span id='item8' ></span><br>
+<input type=radio name=q3 onclick='cans3=3;'><span id='item9' ></span><br>
+<p id='show3'></p><br><br>
+
+<span id='voc4'></span><br><br>
+<input type=radio name=q4 onclick='cans4=1;'><span id='item10' ></span><br>
+<input type=radio name=q4 onclick='cans4=2;'><span id='item11' ></span><br>
+<p id='show4'></p><br><br>
+
+<span id='voc5'></span><br><br>
+<input type=radio name=q5 onclick='cans5=1;'><span id='item12' ></span><br>
+<input type=radio name=q5 onclick='cans5=2;'><span id='item13' ></span><br>
+<input type=radio name=q5 onclick='cans5=3;'><span id='item14' ></span><br>
+<p id='show5'></p><br><br>
+
+<span id='voc6'></span><br><br>
+請輸入答案:&nbsp;&nbsp;<input type=text id=q6></input><br>
+<p id='show6'></p><br><br>
+
+<button onclick='check();'>~交卷~</button>&nbsp;&nbsp;&nbsp;
+<button onclick='retest();'>~重置~</button>
+
+</b></font>
+
+<script>
+function shprob(){
+ 
+ 
+	document.getElementById('voc1').innerHTML=problem[0];
+	document.getElementById('item1').innerHTML=item[0]; 
+	document.getElementById('item2').innerHTML=item[1]; 
+	document.getElementById('item3').innerHTML=item[2]; 
+
+	document.getElementById('voc2').innerHTML=problem[1];
+	document.getElementById('item4').innerHTML=item[3]; 
+	document.getElementById('item5').innerHTML=item[4]; 
+	document.getElementById('item6').innerHTML=item[5]; 
+
+	document.getElementById('voc3').innerHTML=problem[2];
+	document.getElementById('item7').innerHTML=item[6]; 
+	document.getElementById('item8').innerHTML=item[7]; 
+	document.getElementById('item9').innerHTML=item[8]; 
+
+	document.getElementById('voc4').innerHTML=problem[3];
+	document.getElementById('item10').innerHTML="<img src='history6.jpg' width='210' height='340'>"; 
+	document.getElementById('item11').innerHTML="<img src='history17.jpg' width='300' height='190'>"; 
+
+	document.getElementById('voc5').innerHTML=problem[4];
+	document.getElementById('item12').innerHTML="<img src='history16.jpg' width='270' height='180'>"; 
+	document.getElementById('item13').innerHTML="<img src='history15.jpg' width='270' height='180'>"; 
+	document.getElementById('item14').innerHTML="<img src='history2.jpg' width='250' height='160'>"; 
+
+	document.getElementById('voc6').innerHTML=problem[5];
+	
+
+}
+
+
+</script>
+</body>
+
+</html>
